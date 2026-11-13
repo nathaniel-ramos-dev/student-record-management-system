@@ -170,7 +170,13 @@ The application is deployed on Render with the Render CLI:
 - PostgreSQL database: `srms-db` (`dpg-dbrcvtl9fdbs73e17cag-a`)
 - Health check: `/health`
 
-See **[docs/DEPLOYMENT-RENDER.md](docs/DEPLOYMENT-RENDER.md)** for:
+See **[docs/DEPLOYMENT-RENDER.md](docs/DEPLOYMENT-RENDER.md)** for the Markdown
+guide, or the formatted Word documents:
+
+- **[docs/DEPLOYMENT-RENDER.docx](docs/DEPLOYMENT-RENDER.docx)** — hosting and deployment guide
+- **[docs/SRMS-PROJECT-DOCUMENTATION.docx](docs/SRMS-PROJECT-DOCUMENTATION.docx)** — full project documentation
+
+The deployment guide covers:
 
 - the exact CLI commands used to create the database and web service
 - environment variable reference

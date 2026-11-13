@@ -1,5 +1,10 @@
 # Deploying SRMS to Render with the Render CLI
 
+> A formatted Word version of this guide is available at
+> [`docs/DEPLOYMENT-RENDER.docx`](DEPLOYMENT-RENDER.docx). The full project
+> documentation is available at
+> [`docs/SRMS-PROJECT-DOCUMENTATION.docx`](SRMS-PROJECT-DOCUMENTATION.docx).
+
 This document is the step-by-step hosting guide for the **Student Record
 Management System (SRMS)**. It reproduces the live deployment that is already
 running at:
