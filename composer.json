@@ -1,6 +1,6 @@
 {
     "name": "srms/student-record-management-system",
-    "description": "A simple PHP and MySQL student record management system, ready for InfinityFree hosting.",
+    "description": "A PHP student record management system with MySQL/MariaDB and PostgreSQL support, deployable to Render.",
     "type": "project",
     "license": "MIT",
     "require": {
