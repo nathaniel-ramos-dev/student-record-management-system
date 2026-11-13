@@ -1,0 +1,59 @@
+# ============================================================================
+#  SRMS — Render Blueprint
+# ============================================================================
+#  Optional reproducible infrastructure definition. The primary deployment
+#  path for this project is the Render CLI (see docs/DEPLOYMENT-RENDER.md).
+#
+#  A Blueprint can also be launched from the Render Dashboard:
+#    New + -> Blueprint -> select this repository.
+#
+#  IMPORTANT: Render's free Postgres plan expires 30 days after creation.
+#  Upgrade the database before the expiry date if you need it to stay online.
+# ============================================================================
+
+databases:
+  - name: srms-db
+    databaseName: srms
+    user: srms
+    plan: free
+    region: singapore
+    postgresMajorVersion: "18"
+
+services:
+  - type: web
+    name: srms
+    runtime: docker
+    plan: free
+    region: singapore
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: DB_DRIVER
+        value: pgsql
+      - key: DB_HOST
+        fromDatabase:
+          name: srms-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: srms-db
+          property: port
+      - key: DB_NAME
+        fromDatabase:
+          name: srms-db
+          property: database
+      - key: DB_USER
+        fromDatabase:
+          name: srms-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: srms-db
+          property: password
+      - key: DB_SSLMODE
+        value: prefer
+      - key: RUN_MIGRATIONS
+        value: "true"
+      - key: APP_DEBUG
+        value: "false"

@@ -1,0 +1,19 @@
+# Dependencies and local tooling
+/vendor/
+/node_modules/
+
+# Local environment overrides (never commit real credentials)
+.env
+.env.local
+.env.*.local
+
+# PHP tooling caches
+.phpunit.cache/
+.phpunit.result.cache
+/build/
+/coverage/
+
+# Uploaded / generated files
+*.log
+.DS_Store
+Thumbs.db
